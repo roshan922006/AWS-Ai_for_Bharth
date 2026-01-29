@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechTutors - Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="container mx-auto p-4">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-bold mb-2">🧠 TechTutors Demo</h1>
+            <p class="text-gray-400">Socratic AI Mentor - Browser Demo</p>
+        </header>
+
+        <div class="max-w-4xl mx-auto bg-gray-800 rounded-lg p-6">
+            <div id="chat" class="h-96 overflow-y-auto mb-4 p-4 bg-gray-700 rounded">
+                <div class="mb-4 p-3 bg-blue-900 rounded">
+                    <strong>TechTutors:</strong> Hello! I'm your Socratic AI mentor. Instead of giving direct answers, I'll guide you through questions. What technical challenge are you facing?
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <input 
+                    type="text" 
+                    id="messageInput" 
+                    placeholder="Describe your technical challenge..."
+                    class="flex-1 p-3 bg-gray-600 rounded text-white"
+                    onkeypress="if(event.key==='Enter') sendMessage()"
+                >
+                <button onclick="sendMessage()" class="px-6 py-3 bg-blue-600 rounded hover:bg-blue-700">
+                    Send
+                </button>
+            </div>
+
+            <div class="mt-4 text-sm text-gray-400">
+                💡 Try: "I'm getting a 403 error with AWS S3" or "My Lambda function isn't working"
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const responses = [
+            "What do you think might be causing this error? Let's explore the underlying systems together.",
+            "Interesting! When you see this type of error, what are the first things you check?",
+            "Good question! How does the authentication flow work in this scenario?",
+            "Let's think about this step by step. What role do permissions play here?",
+            "That's a great observation! What's the difference between the various types of policies involved?"
+        ];
+
+        let responseIndex = 0;
+
+        function sendMessage() {
+            const input = document.getElementById('messageInput');
+            const chat = document.getElementById('chat');
+            const message = input.value.trim();
+            
+            if (!message) return;
+
+            // Add user message
+            chat.innerHTML += `
+                <div class="mb-4 p-3 bg-gray-600 rounded text-right">
+                    <strong>You:</strong> ${message}
+                </div>
+            `;
+
+            // Add Socratic response
+            setTimeout(() => {
+                const response = responses[responseIndex % responses.length];
+                chat.innerHTML += `
+                    <div class="mb-4 p-3 bg-blue-900 rounded">
+                        <strong>TechTutors:</strong> ${response}
+                    </div>
+                `;
+                responseIndex++;
+                chat.scrollTop = chat.scrollHeight;
+            }, 1000);
+
+            input.value = '';
+            chat.scrollTop = chat.scrollHeight;
+        }
+    </script>
+</body>
+</html>
