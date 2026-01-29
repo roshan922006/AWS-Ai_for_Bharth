@@ -1,19 +1,19 @@
-# 🧠 TechTutors - Socratic AI Mentor for Developers
+# TechTutors - Socratic AI Mentor for Developers
 
 > "We don't solve your bugs; we build the architect who prevents them."
 
 TechTutors is a production-ready AI-powered learning assistant that helps developers learn faster and understand technology deeply by guiding them using Socratic questioning instead of directly giving answers.
 
-## 🎯 What Makes TechTutors Different
+## What Makes TechTutors Different
 
-- ❌ **Never gives direct solutions** - builds understanding through inquiry
-- ✅ **Asks guiding questions** that lead to discovery
-- ✅ **Progressive hint system** - from subtle to direct guidance
-- ✅ **Dual-agent architecture** - diagnostic analysis + Socratic transformation
-- ✅ **Voice-enabled learning** - speak your questions, hear responses
-- ✅ **Environment-aware** - adapts to your tech stack and experience
+- **Never gives direct solutions** - builds understanding through inquiry
+- **Asks guiding questions** that lead to discovery
+- **Progressive hint system** - from subtle to direct guidance
+- **Dual-agent architecture** - diagnostic analysis + Socratic transformation
+- **Voice-enabled learning** - speak your questions, hear responses
+- **Environment-aware** - adapts to your tech stack and experience
 
-## 🚀 Quick Start (Recommended)
+## Quick Start (Recommended)
 
 ### Prerequisites
 - **Docker Desktop** installed ([Download here](https://docs.docker.com/desktop/))
@@ -62,7 +62,7 @@ docker-compose up -d
 3. Send test message: `"I'm getting a 403 error with AWS S3"`
 4. Verify you get **questions**, not direct answers!
 
-## 🏗️ Architecture Overview
+##  Architecture Overview
 
 ```
 ┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
@@ -88,13 +88,13 @@ docker-compose up -d
 
 ### The Socratic Method in Action
 
-**❌ Traditional AI Assistant:**
+** Traditional AI Assistant:**
 ```
 User: "My S3 returns 403"
 AI: "Add s3:GetObject permission to your IAM role"
 ```
 
-**✅ TechTutors Socratic Approach:**
+** TechTutors Socratic Approach:**
 ```
 User: "My S3 returns 403"
 TechTutors: "What do you think happens when AWS can't verify your identity? 
@@ -117,38 +117,38 @@ TechTutors: "Great question! How does AWS determine if you have permission
    - Provides progressive hints (3 levels)
    - Adapts to your experience level
 
-## 🎯 Key Features
+##  Key Features
 
-### 💬 Intelligent Chat Interface
+###  Intelligent Chat Interface
 - Real-time WebSocket communication
 - Progressive hint system (Subtle → Moderate → Direct)
 - Suggested follow-up questions
 - Session memory and context
 
-### 🎤 Voice-Enabled Learning
+###  Voice-Enabled Learning
 - Speech-to-text input (browser-based)
 - Natural text-to-speech responses (ElevenLabs)
 - Seamless voice + text interaction
 
-### 📝 Code & Log Analysis
+###  Code & Log Analysis
 - Paste code snippets for analysis
 - Upload error logs and stack traces
 - Syntax highlighting and formatting
 - Context-aware questioning
 
-### 📊 Learning Analytics
+###  Learning Analytics
 - Progress tracking per topic
 - Hint usage patterns
 - Mistake learning opportunities
 - Session duration and engagement
 
-### 🧠 RAG-Powered Knowledge
+###  RAG-Powered Knowledge
 - Vector database with AWS documentation
 - Contextual information retrieval
 - Environment-specific guidance
 - Expandable knowledge base
 
-## 🛠️ Manual Setup (Development)
+##  Manual Setup (Development)
 
 <details>
 <summary>Click to expand manual setup instructions</summary>
@@ -201,7 +201,7 @@ createdb techtutors
 
 </details>
 
-## 🔐 AWS Bedrock Setup
+##  AWS Bedrock Setup
 
 ### 1. Enable Bedrock Service
 
@@ -242,7 +242,7 @@ createdb techtutors
    AWS_DEFAULT_REGION=us-east-1
    ```
 
-## 🎤 ElevenLabs Setup (Optional)
+##  ElevenLabs Setup (Optional)
 
 1. **Sign up** at [ElevenLabs](https://elevenlabs.io)
 2. **Get API key** from dashboard
@@ -250,7 +250,7 @@ createdb techtutors
 
 Voice features will automatically enable when configured.
 
-## 🧪 Testing & Verification
+##  Testing & Verification
 
 ### Automated Verification
 
@@ -288,7 +288,7 @@ chmod +x verify-setup.sh
    - Click "More Help" to escalate hints
    - Verify responses become more direct
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Common Issues
 
@@ -353,7 +353,7 @@ docker-compose up -d
 4. Restart services: `docker-compose restart`
 </details>
 
-## 📊 Monitoring & Logs
+##  Monitoring & Logs
 
 ### View Logs
 
@@ -374,7 +374,7 @@ docker-compose logs -f db
 - **Frontend**: http://localhost:3000
 - **Database**: `docker-compose exec db pg_isready`
 
-## 🚀 Production Deployment
+##  Production Deployment
 
 ### Build for Production
 
@@ -397,18 +397,18 @@ AWS_SECRET_ACCESS_KEY=your_production_aws_secret
 ELEVENLABS_API_KEY=your_production_elevenlabs_key
 ```
 
-## 🤝 Contributing
+##  Contributing
 
 1. **Follow Socratic Principles**: Never provide direct answers
 2. **Maintain Architecture**: Keep dual-agent system intact
 3. **Add Tests**: Include tests for new features
 4. **Update Documentation**: Keep guides current
 
-## 📄 License
+##  License
 
 MIT License - see LICENSE file for details.
 
-## 🎯 Quick Verification Checklist
+##  Quick Verification Checklist
 
 - [ ] Docker services running (`docker-compose ps`)
 - [ ] Backend health check passes (http://localhost:8000/health)
@@ -422,8 +422,9 @@ MIT License - see LICENSE file for details.
 
 ---
 
-## 🎉 Ready to Learn?
+##  Ready to Learn?
 
 Visit **http://localhost:3000** and start your Socratic learning journey!
+
 
 Try asking: *"I'm getting a 403 error with AWS S3"* and experience the difference! 🧠✨
